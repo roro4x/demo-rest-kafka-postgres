@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,7 +11,9 @@ public class Deal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int signed;
+    @JsonIgnore
     private int value;
+    @JsonIgnore
     private String currency;
     @Transient
     private Price price;
