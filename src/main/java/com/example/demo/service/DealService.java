@@ -8,7 +8,6 @@ import com.example.demo.repository.DealRepository;
 import com.example.demo.repository.ManagerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 
 @Service

@@ -1,7 +1,6 @@
 package com.example.demo.model.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
@@ -10,12 +9,9 @@ import javax.persistence.*;
 public class Manager {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @GeneratedValue(strategy=GenerationType.SEQUENCE,
-            generator="manager_id_seq")
-    @SequenceGenerator(name="manager_id_seq",
-            sequenceName="manager_id_seq", allocationSize=10)
-    private int id;
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="manager_id_seq")
+    @SequenceGenerator(name="manager_id_seq", sequenceName="manager_id_seq", allocationSize=10)
+    private Long id;
     private String name;
     private String phone;
 }
